@@ -225,16 +225,7 @@
   border: 1px solid var(--color-border);
 }
 
-/* ── Mobile Footer ── */
-.mobile-footer {
-  position: fixed; bottom: 0; left: 0; right: 0;
-  z-index: 40; height: var(--footer-height);
-  background-color: var(--color-bg-elevated);
-  border-top: 1px solid var(--color-border);
-  display: flex; align-items: center; justify-content: space-around;
-  padding: 0 var(--space-4);
-}
-@media (min-width: 768px) { .mobile-footer { display: none; } }
+
 
 /* ── Menu Form Modal ── */
 .menu-form { display: flex; flex-direction: column; gap: var(--space-4); }

@@ -133,7 +133,7 @@ class Store {
 
   getOrder(id) { return this.orders.find(o => o.id === id); }
 
-  createOrder({ customerName, tableNumber, pickupTime, notes }) {
+  createOrder({ customerName, phone, tableNumber, pickupTime, notes }) {
     const items = this.cart.map(c => ({ ...c }));
     const subtotal = calculateSubtotal(items);
     const serviceCharge = calculateServiceCharge(subtotal);
@@ -142,6 +142,7 @@ class Store {
     const order = {
       id: generateId('ORD'),
       customerName,
+      phone,
       tableNumber,
       pickupTime,
       notes,

@@ -131,6 +131,29 @@
   justify-content: center;
 }
 
+/* ── Mobile Footer (shared) ── */
+.mobile-footer {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 40; height: var(--footer-height);
+  background-color: var(--color-bg-elevated);
+  border-top: 1px solid var(--color-border);
+  display: flex; align-items: center; justify-content: space-around;
+  padding: 0 var(--space-4);
+}
+.footer-badge {
+  position: relative;
+}
+.footer-badge-count {
+  position: absolute;
+  top: -4px; right: -4px;
+  min-width: 18px; height: 18px;
+  padding: 0 4px;
+  font-size: 0.625rem; font-weight: 700;
+  color: #fff;
+  background-color: var(--color-danger);
+  border-radius: var(--radius-full);
+  display: flex; align-items: center; justify-content: center;
+}
 @media (min-width: 768px) {
   .footer,
   .mobile-footer {
