@@ -32,15 +32,68 @@
       <div class="page-main" style="margin-left: 0;">
         <div class="page-header">
           <h1 class="page-title">後台管理</h1>
-          <p class="page-subtitle">訂單與菜單管理</p>
+          <p class="page-subtitle">系統管理與設定</p>
         </div>
-        <div id="admin-stats" class="admin-stats"></div>
-        <div class="admin-tabs">
-          <button class="admin-tab active" data-tab="orders">訂單管理</button>
-          <button class="admin-tab" data-tab="menu">菜單管理</button>
+
+        <div class="admin-section-tabs">
+          <button class="admin-section-tab active" data-section="master">
+            <span class="admin-section-tab-icon">📋</span>
+            <span>Master Management</span>
+          </button>
+          <button class="admin-section-tab" data-section="data">
+            <span class="admin-section-tab-icon">📊</span>
+            <span>Data Management</span>
+          </button>
+          <button class="admin-section-tab" data-section="logs">
+            <span class="admin-section-tab-icon">📝</span>
+            <span>Logs Management</span>
+          </button>
         </div>
-        <div id="admin-orders-section"><div id="admin-orders" class="admin-orders"></div></div>
-        <div id="admin-menu-section" style="display: none;"><div id="admin-menu"></div></div>
+
+        <!-- Master Management -->
+        <div id="section-master" class="admin-section-content active">
+          <div class="section-header">
+            <h2 class="section-title">Master Management</h2>
+            <p class="section-subtitle">管理菜單、分類及系統設定</p>
+          </div>
+          <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="menu">菜單管理</button>
+            <button class="admin-tab" data-tab="categories">分類管理</button>
+            <button class="admin-tab" data-tab="settings">系統設定</button>
+          </div>
+          <div id="admin-menu-section"><div id="admin-menu"></div></div>
+          <div id="admin-categories-section" style="display: none;"><div id="admin-categories"></div></div>
+          <div id="admin-settings-section" style="display: none;"><div id="admin-settings"></div></div>
+        </div>
+
+        <!-- Data Management -->
+        <div id="section-data" class="admin-section-content" style="display: none;">
+          <div class="section-header">
+            <h2 class="section-title">Data Management</h2>
+            <p class="section-subtitle">訂單數據與統計報表</p>
+          </div>
+          <div id="admin-stats" class="admin-stats"></div>
+          <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="orders">訂單管理</button>
+            <button class="admin-tab" data-tab="reports">統計報表</button>
+          </div>
+          <div id="admin-orders-section"><div id="admin-orders" class="admin-orders"></div></div>
+          <div id="admin-reports-section" style="display: none;"><div id="admin-reports"></div></div>
+        </div>
+
+        <!-- Logs Management -->
+        <div id="section-logs" class="admin-section-content" style="display: none;">
+          <div class="section-header">
+            <h2 class="section-title">Logs Management</h2>
+            <p class="section-subtitle">系統操作記錄與審計日誌</p>
+          </div>
+          <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="activity">操作日誌</button>
+            <button class="admin-tab" data-tab="audit">審計日誌</button>
+          </div>
+          <div id="admin-activity-section"><div id="admin-activity"></div></div>
+          <div id="admin-audit-section" style="display: none;"><div id="admin-audit"></div></div>
+        </div>
       </div>
     </div>
   </div>
@@ -68,8 +121,16 @@
             <input class="input" type="text" id="menu-name" name="name" placeholder="餐點名稱" required>
           </div>
           <div class="menu-form-group">
+            <label class="label" for="menu-name-en">English Name</label>
+            <input class="input" type="text" id="menu-name-en" name="nameEn" placeholder="English name">
+          </div>
+          <div class="menu-form-group">
             <label class="label" for="menu-desc">描述</label>
             <textarea class="textarea" id="menu-desc" name="description" placeholder="簡短描述" rows="2"></textarea>
+          </div>
+          <div class="menu-form-group">
+            <label class="label" for="menu-desc-en">English Description</label>
+            <textarea class="textarea" id="menu-desc-en" name="descriptionEn" placeholder="Brief description" rows="2"></textarea>
           </div>
           <div class="menu-form-row">
             <div class="menu-form-group">
