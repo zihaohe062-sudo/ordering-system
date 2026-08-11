@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>後台管理 — 簡約點餐</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-brand">
+      <div class="header-brand-icon">☕</div>
+      <span>簡約點餐</span>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html" class="header-nav-item">← 點餐前台</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-ghost btn-sm" id="lang-toggle">EN</button>
+      <button class="btn btn-ghost btn-icon btn-sm" id="theme-toggle" aria-label="切換主題">
+        <span class="theme-icon-light">🌙</span>
+        <span class="theme-icon-dark" style="display:none;">☀️</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="admin-view active">
+    <div class="page">
+      <div class="page-main" style="margin-left: 0;">
+        <div class="page-header">
+          <h1 class="page-title">後台管理</h1>
+          <p class="page-subtitle">訂單與菜單管理</p>
+        </div>
+        <div id="admin-stats" class="admin-stats"></div>
+        <div class="admin-tabs">
+          <button class="admin-tab active" data-tab="orders">訂單管理</button>
+          <button class="admin-tab" data-tab="menu">菜單管理</button>
+        </div>
+        <div id="admin-orders-section"><div id="admin-orders" class="admin-orders"></div></div>
+        <div id="admin-menu-section" style="display: none;"><div id="admin-menu"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="order-detail-modal" class="modal-overlay">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <div class="modal-title">訂單詳情</div>
+        <button class="modal-close" id="close-order-detail-btn" aria-label="關閉">✕</button>
+      </div>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="menu-form-modal" class="modal-overlay">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">新增餐點</div>
+        <button class="modal-close" id="close-menu-form-btn" aria-label="關閉">✕</button>
+      </div>
+      <div class="modal-body">
+        <form class="menu-form">
+          <div class="menu-form-group">
+            <label class="label" for="menu-name">名稱 *</label>
+            <input class="input" type="text" id="menu-name" name="name" placeholder="餐點名稱" required>
+          </div>
+          <div class="menu-form-group">
+            <label class="label" for="menu-desc">描述</label>
+            <textarea class="textarea" id="menu-desc" name="description" placeholder="簡短描述" rows="2"></textarea>
+          </div>
+          <div class="menu-form-row">
+            <div class="menu-form-group">
+              <label class="label" for="menu-price">價格 *</label>
+              <input class="input" type="number" id="menu-price" name="price" min="0" step="1" placeholder="0" required>
+            </div>
+            <div class="menu-form-group">
+              <label class="label" for="menu-category">分類</label>
+              <select class="input select" id="menu-category" name="category">
+                <option value="mains">主食</option>
+                <option value="sides">小食</option>
+                <option value="drinks">飲品</option>
+                <option value="desserts">甜品</option>
+              </select>
+            </div>
+          </div>
+          <div class="menu-form-group">
+            <label class="label" for="menu-tags">標籤（逗號分隔）</label>
+            <input class="input" type="text" id="menu-tags" name="tags" placeholder="例如：人氣, 推薦">
+          </div>
+          <div class="menu-form-group">
+            <label class="label" for="menu-image">圖片網址</label>
+            <input class="input" type="text" id="menu-image" name="image" placeholder="https://example.com/photo.jpg">
+          </div>
+          <div class="menu-form-group">
+            <label class="label">或上傳圖片</label>
+            <div class="image-upload-area">
+              <input type="file" id="menu-image-upload" accept="image/*" class="image-upload-input">
+              <label for="menu-image-upload" class="image-upload-label">📁 點擊選擇圖片</label>
+            </div>
+            <div id="image-preview" class="image-preview"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full btn-lg">儲存</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <nav class="mobile-footer">
+    <a href="index.html" class="footer-item">
+      <div class="footer-item-icon">🍽️</div>
+      <span>點餐</span>
+    </a>
+    <div class="footer-item active" data-view="admin">
+      <div class="footer-item-icon">⚙️</div>
+      <span>管理</span>
+    </div>
+  </nav>
+
+  <script type="module" src="js/app-admin.js"></script>
+</body>
+</html>

@@ -1,16 +1,15 @@
-export const CATEGORIES = [
-  { id: 'all', name: '全部', icon: '🍽️' },
-  { id: 'mains', name: '主食', icon: '🍚' },
-  { id: 'sides', name: '小食', icon: '🍟' },
-  { id: 'drinks', name: '飲品', icon: '☕' },
-  { id: 'desserts', name: '甜品', icon: '🍰' },
-];
+import { getCategories, getStatuses } from './i18n.js';
+
+export function getCATEGORIES() { return getCategories(); }
+export function getORDER_STATUSES() { return getStatuses(); }
 
 export const DEFAULT_MENU = [
   {
     id: 'item_001',
     name: '日式咖喱飯',
+    nameEn: 'Japanese Curry Rice',
     description: '自家製濃厚咖喱，配白飯及溫泉蛋',
+    descriptionEn: 'Homemade rich curry with rice and onsen egg',
     price: 68,
     category: 'mains',
     tags: ['人氣', '推薦'],
@@ -20,7 +19,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_002',
     name: '意式番茄肉醬意粉',
+    nameEn: 'Italian Bolognese Pasta',
     description: '新鮮番茄熬製肉醬，配彈牙意粉',
+    descriptionEn: 'Fresh tomato meat sauce with al dente pasta',
     price: 58,
     category: 'mains',
     tags: [],
@@ -30,7 +31,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_003',
     name: '香煎三文魚定食',
+    nameEn: 'Pan-seared Salmon Set',
     description: '挪威三文魚香煎至金黃，附味噌湯及漬物',
+    descriptionEn: 'Norwegian salmon pan-seared golden, with miso soup',
     price: 88,
     category: 'mains',
     tags: ['推薦'],
@@ -40,7 +43,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_004',
     name: '慢煮牛肋定食',
+    nameEn: 'Slow-cooked Beef Rib Set',
     description: '低溫慢煮12小時，肉質嫩滑入口即化',
+    descriptionEn: '12-hour slow cooked, melt-in-mouth tender',
     price: 98,
     category: 'mains',
     tags: ['限定'],
@@ -50,7 +55,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_005',
     name: '松露薯條',
+    nameEn: 'Truffle Fries',
     description: '脆炸薯條配松露油及帕爾馬乾酪',
+    descriptionEn: 'Crispy fries with truffle oil and parmesan',
     price: 38,
     category: 'sides',
     tags: ['人氣'],
@@ -60,7 +67,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_006',
     name: '唐揚雞塊',
+    nameEn: 'Karaage Chicken',
     description: '日式炸雞塊，配蛋黃醬及檸檬',
+    descriptionEn: 'Japanese fried chicken with mayo and lemon',
     price: 42,
     category: 'sides',
     tags: [],
@@ -70,7 +79,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_007',
     name: '煙燻三文魚沙律',
+    nameEn: 'Smoked Salmon Salad',
     description: '新鮮沙律配煙燻三文魚及油醋汁',
+    descriptionEn: 'Fresh salad with smoked salmon and vinaigrette',
     price: 48,
     category: 'sides',
     tags: ['推薦'],
@@ -80,7 +91,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_008',
     name: '手打咖啡',
+    nameEn: 'Hand-drip Coffee',
     description: '自家烘焙咖啡豆，手沖萃取',
+    descriptionEn: 'House-roasted beans, hand-drip extracted',
     price: 32,
     category: 'drinks',
     tags: [],
@@ -90,7 +103,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_009',
     name: '抹茶拿鐵',
+    nameEn: 'Matcha Latte',
     description: '日本宇治抹茶，配燕麥奶',
+    descriptionEn: 'Uji matcha with oat milk',
     price: 35,
     category: 'drinks',
     tags: ['推薦'],
@@ -100,7 +115,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_010',
     name: '鮮榨果汁',
+    nameEn: 'Fresh Juice',
     description: '每日新鮮現榨，可選橙/蘋果/混合',
+    descriptionEn: 'Freshly squeezed daily, orange/apple/mixed',
     price: 28,
     category: 'drinks',
     tags: [],
@@ -110,7 +127,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_011',
     name: '伯爵茶',
+    nameEn: 'Earl Grey Tea',
     description: '斯里蘭卡產伯爵紅茶，可回沖',
+    descriptionEn: 'Sri Lankan Earl Grey, refillable',
     price: 25,
     category: 'drinks',
     tags: [],
@@ -120,7 +139,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_012',
     name: '焦糖布丁',
+    nameEn: 'Crème Caramel',
     description: '法式手法製作，表面焦糖微苦帶甜',
+    descriptionEn: 'French style, caramelized sugar crust',
     price: 28,
     category: 'desserts',
     tags: ['人氣'],
@@ -130,7 +151,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_013',
     name: '抹茶 tiramisu',
+    nameEn: 'Matcha Tiramisu',
     description: '以抹茶代替咖啡的意式經典甜品',
+    descriptionEn: 'Italian classic with matcha instead of coffee',
     price: 38,
     category: 'desserts',
     tags: ['推薦'],
@@ -140,7 +163,9 @@ export const DEFAULT_MENU = [
   {
     id: 'item_014',
     name: '時令水果拼盤',
+    nameEn: 'Seasonal Fruit Platter',
     description: '精選當季新鮮水果',
+    descriptionEn: 'Curated seasonal fresh fruits',
     price: 32,
     category: 'desserts',
     tags: [],
@@ -149,17 +174,11 @@ export const DEFAULT_MENU = [
   },
 ];
 
-export const ORDER_STATUSES = {
-  pending: { label: '待處理', color: 'warning', icon: '⏳' },
-  preparing: { label: '製作中', color: 'info', icon: '👨‍🍳' },
-  ready: { label: '可取餐', color: 'success', icon: '✅' },
-  completed: { label: '已完成', color: 'neutral', icon: '✔️' },
-};
-
 export const MOCK_ORDERS = [
   {
     id: 'ORD-001',
     customerName: '陳先生',
+    phone: '91234567',
     tableNumber: '5',
     pickupTime: '12:30',
     notes: '少辣',
@@ -176,6 +195,7 @@ export const MOCK_ORDERS = [
   {
     id: 'ORD-002',
     customerName: '李小姐',
+    phone: '98765432',
     tableNumber: '外帶',
     pickupTime: '13:00',
     notes: '',
@@ -192,6 +212,7 @@ export const MOCK_ORDERS = [
   {
     id: 'ORD-003',
     customerName: '王生',
+    phone: '55667788',
     tableNumber: '3',
     pickupTime: '11:45',
     notes: '加蛋',
