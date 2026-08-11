@@ -1,0 +1,114 @@
+[debug] [2026-08-10T15:50:34.544Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T15:50:34.545Z] Command:       /usr/local/bin/node /Users/ho/.npm-global/bin/firebase init hosting
+[debug] [2026-08-10T15:50:34.545Z] CLI Version:   15.26.0
+[debug] [2026-08-10T15:50:34.545Z] Platform:      darwin
+[debug] [2026-08-10T15:50:34.545Z] Node Version:  v24.19.0
+[debug] [2026-08-10T15:50:34.545Z] Detected Agent: open_code
+[debug] [2026-08-10T15:50:34.545Z] Time:          Mon Aug 10 2026 23:50:34 GMT+0800 (Hong Kong Standard Time)
+[debug] [2026-08-10T15:50:34.545Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Applications/ordering-system
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-08-10T15:50:34.851Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-10T15:50:34.851Z] > authorizing via signed-in user (appclst@gmail.com)
+[debug] [2026-08-10T15:50:34.862Z] Checked if tokens are valid: true, expires at: 1786380567819
+[debug] [2026-08-10T15:50:34.862Z] Checked if tokens are valid: true, expires at: 1786380567819
+[debug] [2026-08-10T15:50:34.863Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo [none]
+[debug] [2026-08-10T15:50:35.292Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo 403
+[debug] [2026-08-10T15:50:35.292Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-08-10T15:50:35.293Z] Request to https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo had HTTP Error: 403, The caller does not have permission
+[debug] [2026-08-10T15:50:35.293Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo had HTTP Error: 403, The caller does not have permission
+    at responseToError (/Users/ho/.npm-global/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/Users/ho/.npm-global/lib/node_modules/firebase-tools/lib/apiv2.js:415:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[error] 
+[error] Error: Failed to get Firebase project ordering-system-demo. Please make sure the project exists and your account has permission to access it.
+[debug] [2026-08-10T15:51:33.248Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T15:51:33.250Z] Command:       /usr/local/bin/node /Users/ho/.npm-global/bin/firebase deploy --only hosting
+[debug] [2026-08-10T15:51:33.250Z] CLI Version:   15.26.0
+[debug] [2026-08-10T15:51:33.250Z] Platform:      darwin
+[debug] [2026-08-10T15:51:33.250Z] Node Version:  v24.19.0
+[debug] [2026-08-10T15:51:33.250Z] Detected Agent: open_code
+[debug] [2026-08-10T15:51:33.250Z] Time:          Mon Aug 10 2026 23:51:33 GMT+0800 (Hong Kong Standard Time)
+[debug] [2026-08-10T15:51:33.250Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-08-10T15:51:33.894Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-10T15:51:33.895Z] > authorizing via signed-in user (appclst@gmail.com)
+[debug] [2026-08-10T15:51:33.895Z] [iam] checking project ordering-system-demo for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-08-10T15:51:33.900Z] Checked if tokens are valid: true, expires at: 1786380567819
+[debug] [2026-08-10T15:51:33.900Z] Checked if tokens are valid: true, expires at: 1786380567819
+[debug] [2026-08-10T15:51:33.901Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ordering-system-demo:testIamPermissions [none]
+[debug] [2026-08-10T15:51:33.901Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ordering-system-demo:testIamPermissions  x-goog-user-project=ordering-system-demo
+[debug] [2026-08-10T15:51:33.901Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ordering-system-demo:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-08-10T15:51:34.990Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ordering-system-demo:testIamPermissions 400
+[debug] [2026-08-10T15:51:34.991Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ordering-system-demo:testIamPermissions {"error":{"code":400,"message":"Project 'projects/ordering-system-demo' not found or deleted.","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"USER_PROJECT_DENIED","domain":"googleapis.com","metadata":{"containerInfo":"projects/ordering-system-demo","consumer":"projects/ordering-system-demo","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2026-08-10T15:51:34.992Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/ordering-system-demo:testIamPermissions had HTTP Error: 400, Project 'projects/ordering-system-demo' not found or deleted.
+[debug] [2026-08-10T15:51:34.992Z] Checked if tokens are valid: true, expires at: 1786380567819
+[debug] [2026-08-10T15:51:34.992Z] Checked if tokens are valid: true, expires at: 1786380567819
+[debug] [2026-08-10T15:51:34.992Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo [none]
+[debug] [2026-08-10T15:51:35.489Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo 403
+[debug] [2026-08-10T15:51:35.489Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-08-10T15:51:35.490Z] Request to https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo had HTTP Error: 403, The caller does not have permission
+[debug] [2026-08-10T15:51:35.491Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/ordering-system-demo had HTTP Error: 403, The caller does not have permission
+    at responseToError (/Users/ho/.npm-global/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/Users/ho/.npm-global/lib/node_modules/firebase-tools/lib/apiv2.js:415:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[error] 
+[error] Error: Failed to get Firebase project ordering-system-demo. Please make sure the project exists and your account has permission to access it.
+[debug] [2026-08-10T23:38:56.411Z] ----------------------------------------------------------------------
+[debug] [2026-08-10T23:38:56.417Z] Command:       /usr/local/bin/node /Users/ho/.npm-global/bin/firebase deploy --only hosting
+[debug] [2026-08-10T23:38:56.418Z] CLI Version:   15.26.0
+[debug] [2026-08-10T23:38:56.418Z] Platform:      darwin
+[debug] [2026-08-10T23:38:56.418Z] Node Version:  v24.19.0
+[debug] [2026-08-10T23:38:56.418Z] Detected Agent: open_code
+[debug] [2026-08-10T23:38:56.418Z] Time:          Tue Aug 11 2026 07:38:56 GMT+0800 (Hong Kong Standard Time)
+[debug] [2026-08-10T23:38:56.418Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-08-10T23:38:57.354Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-08-10T23:38:57.355Z] > authorizing via signed-in user (appclst@gmail.com)
+[debug] [2026-08-10T23:38:57.355Z] [iam] checking project my-ordering-cafe for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-08-10T23:38:57.367Z] Checked if tokens are valid: false, expires at: 1786380567819
+[debug] [2026-08-10T23:38:57.367Z] Checked if tokens are valid: false, expires at: 1786380567819
+[debug] [2026-08-10T23:38:57.367Z] > refreshing access token with scopes: []
+[debug] [2026-08-10T23:38:57.369Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-08-10T23:38:57.369Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-08-10T23:38:57.514Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-08-10T23:38:57.514Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-08-10T23:38:57.529Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/my-ordering-cafe:testIamPermissions [none]
+[debug] [2026-08-10T23:38:57.529Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/my-ordering-cafe:testIamPermissions  x-goog-user-project=my-ordering-cafe
+[debug] [2026-08-10T23:38:57.529Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/my-ordering-cafe:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-08-10T23:38:58.243Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/my-ordering-cafe:testIamPermissions 403
+[debug] [2026-08-10T23:38:58.243Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/my-ordering-cafe:testIamPermissions {"error":{"code":403,"message":"Caller does not have required permission to use project my-ordering-cafe. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=my-ordering-cafe and then retry. Propagation of the new permission may take a few minutes.","status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"USER_PROJECT_DENIED","domain":"googleapis.com","metadata":{"containerInfo":"my-ordering-cafe","service":"cloudresourcemanager.googleapis.com","consumer":"projects/my-ordering-cafe","consoleUrl":"https://console.developers.google.com/iam-admin/iam?project=my-ordering-cafe"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Caller does not have required permission to use project my-ordering-cafe. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=my-ordering-cafe and then retry. Propagation of the new permission may take a few minutes."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developer console IAM admin","url":"https://console.developers.google.com/iam-admin/iam?project=my-ordering-cafe"}]}]}}
+[debug] [2026-08-10T23:38:58.244Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/my-ordering-cafe:testIamPermissions had HTTP Error: 403, Caller does not have required permission to use project my-ordering-cafe. Grant the caller the roles/serviceusage.serviceUsageConsumer role, or a custom role with the serviceusage.services.use permission, by visiting https://console.developers.google.com/iam-admin/iam?project=my-ordering-cafe and then retry. Propagation of the new permission may take a few minutes.
+[debug] [2026-08-10T23:38:58.245Z] Checked if tokens are valid: true, expires at: 1786408736514
+[debug] [2026-08-10T23:38:58.245Z] Checked if tokens are valid: true, expires at: 1786408736514
+[debug] [2026-08-10T23:38:58.245Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/my-ordering-cafe [none]
+[debug] [2026-08-10T23:38:59.369Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/my-ordering-cafe 403
+[debug] [2026-08-10T23:38:59.369Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/my-ordering-cafe {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2026-08-10T23:38:59.370Z] Request to https://firebase.googleapis.com/v1beta1/projects/my-ordering-cafe had HTTP Error: 403, The caller does not have permission
+[debug] [2026-08-10T23:38:59.372Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/my-ordering-cafe had HTTP Error: 403, The caller does not have permission
+    at responseToError (/Users/ho/.npm-global/lib/node_modules/firebase-tools/lib/responseToError.js:53:12)
+    at RetryOperation._fn (/Users/ho/.npm-global/lib/node_modules/firebase-tools/lib/apiv2.js:415:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+[error] 
+[error] Error: Failed to get Firebase project my-ordering-cafe. Please make sure the project exists and your account has permission to access it.
