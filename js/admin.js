@@ -1,5 +1,5 @@
 import { store } from './store.js';
-import { getCATEGORIES, getORDER_STATUSES, getCategoryEmoji, t } from './i18n.js';
+import { getCategories, getStatuses, getCategoryEmoji, t } from './i18n.js';
 import { CONFIG } from './config.js';
 import { formatCurrency, formatTime, escapeHtml } from './utils.js';
 
@@ -27,7 +27,7 @@ function renderOrders() {
   const orders = store.getOrders();
   const cfg = CONFIG();
   const ocfg = cfg.admin.orders;
-  const statuses = getORDER_STATUSES();
+  const statuses = getStatuses();
   const lang = localStorage.getItem('oms_lang') || 'zh-HK';
 
   if (orders.length === 0) {
@@ -75,7 +75,7 @@ function renderOrderDetail() {
   const body = modal.querySelector('.modal-body');
   const cfg = CONFIG();
   const order = selectedOrder;
-  const statuses = getORDER_STATUSES();
+  const statuses = getStatuses();
   const status = statuses[order.status];
   const ocfg = cfg.admin.orders;
   const dcfg = cfg.orderDetail;
@@ -200,7 +200,7 @@ function handleImageUpload(e) {
 }
 
 function getCategoryLabel(id) {
-  const categories = getCATEGORIES();
+  const categories = getCategories();
   const cat = categories.find(c => c.id === id);
   return cat ? cat.name : id;
 }

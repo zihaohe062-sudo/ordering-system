@@ -1,5 +1,5 @@
 import { store } from './store.js';
-import { getCATEGORIES, getORDER_STATUSES, getCategoryEmoji, t } from './i18n.js';
+import { getCategories, getStatuses, getCategoryEmoji, t } from './i18n.js';
 import { CONFIG } from './config.js';
 import { formatCurrency, escapeHtml, getCurrentTime } from './utils.js';
 
@@ -14,7 +14,7 @@ function getCartItemQuantity(itemId) { return store.getCartQuantity(itemId); }
 function renderCategoryTabs() {
   const container = document.getElementById('category-tabs');
   if (!container) return;
-  const categories = getCATEGORIES();
+  const categories = getCategories();
   container.innerHTML = categories.map(cat => `
     <button class="category-tab ${cat.id === activeCategory ? 'active' : ''}" data-category="${cat.id}">
       <span>${cat.icon}</span><span>${cat.name}</span>

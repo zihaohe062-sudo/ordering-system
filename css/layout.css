@@ -132,7 +132,8 @@
 }
 
 @media (min-width: 768px) {
-  .footer {
+  .footer,
+  .mobile-footer {
     display: none;
   }
 }

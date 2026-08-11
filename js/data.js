@@ -1,8 +1,5 @@
 import { getCategories, getStatuses } from './i18n.js';
 
-export function getCATEGORIES() { return getCategories(); }
-export function getORDER_STATUSES() { return getStatuses(); }
-
 export const DEFAULT_MENU = [
   {
     id: 'item_001',
